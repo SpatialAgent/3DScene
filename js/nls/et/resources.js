@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "Vaadet ei saanud luua"
-    },
-    panel: {
-      noslides: "Veebivaates pole slaide"
-    },
-    tooltips: {
-      layers: "Kihid",
-      basemaps: "Aluskaardid",
-      slides: "Slaidid",
-      close: "Sule",
-      zoom: "Suumi",
-      onoff: "Sees/väljas"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "Vaadet ei saanud luua"
+  },
+  "panel": {
+    "noslides": "Veebivaates pole slaide"
+  },
+  "tooltips": {
+    "layers": "Kihid",
+    "basemaps": "Aluskaardid",
+    "slides": "Slaidid",
+    "close": "Sule",
+    "zoom": "Suumi",
+    "onoff": "Sees/väljas"
+  }
+});

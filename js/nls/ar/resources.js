@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "يتعذر إنشاء المشهد"
-    },
-    panel: {
-      noslides: "لا توجد شرائح في مشهد الويب"
-    },
-    tooltips: {
-      layers: "طبقات",
-      basemaps: "خرائط أساس",
-      slides: "الشرائح",
-      close: "إغلاق",
-      zoom: "تغيير مقياس الرسم",
-      onoff: "تشغيل - إيقاف"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "يتعذر إنشاء المشهد"
+  },
+  "panel": {
+    "noslides": "لا توجد شرائح في مشهد الويب"
+  },
+  "tooltips": {
+    "layers": "طبقات",
+    "basemaps": "خرائط أساس",
+    "slides": "الشرائح",
+    "close": "إغلاق",
+    "zoom": "تغيير مقياس الرسم",
+    "onoff": "تشغيل - إيقاف"
+  }
+});

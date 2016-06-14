@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "Nie można utworzyć sceny"
-    },
-    panel: {
-      noslides: "Brak slajdów w scenie internetowej"
-    },
-    tooltips: {
-      layers: "Warstwy",
-      basemaps: "Mapy bazowe",
-      slides: "Slajdy",
-      close: "Zamknij",
-      zoom: "Zmiana skali",
-      onoff: "Włącz-Wyłącz"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "Nie można utworzyć sceny"
+  },
+  "panel": {
+    "noslides": "Brak slajdów w scenie internetowej"
+  },
+  "tooltips": {
+    "layers": "Warstwy",
+    "basemaps": "Mapy bazowe",
+    "slides": "Slajdy",
+    "close": "Zamknij",
+    "zoom": "Zmiana skali",
+    "onoff": "Włącz-Wyłącz"
+  }
+});

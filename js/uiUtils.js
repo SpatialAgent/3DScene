@@ -49,12 +49,11 @@ define([
       var rgb = Color.fromString(bg).toRgb();
       var bg3 = "rgba(" + rgb[0] + "," + rgb[1] + "," + rgb[2] + ",0.3)";
       this.config.colorText = colorText;
-      domStyle.set(win.body(), "color", colorText);
+      domStyle.set("panelTop", "color", colorText);
       domStyle.set("panelTop", "backgroundColor", color);
       query(".esri-search").style("backgroundColor", bg3);
-      query(".esri-search-button").style("color", color);
-      query(".esri-clear-search").style("color", color);
-      query(".esri-search .esri-container .esri-input").style("color", colorText);
+      query(".esri-search__input").style("color", colorText);
+      query(".esri-search .esri-widget-button").style("color", colorText);
       //query(".esri-search .esri-container").style("backgroundColor", bg3);
       //query(".esri-search .esri-container").style("color", color);
       if(colorText === "#000000") {

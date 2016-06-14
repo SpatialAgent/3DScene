@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "Görünüm oluşturulamıyor"
-    },
-    panel: {
-      noslides: "Web görünümünde slayt yok"
-    },
-    tooltips: {
-      layers: "Katmanlar",
-      basemaps: "Altlık haritalar",
-      slides: "Slaytlar",
-      close: "Kapat",
-      zoom: "Yakınlaştır",
-      onoff: "Açık-Kapalı"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "Görünüm oluşturulamıyor"
+  },
+  "panel": {
+    "noslides": "Web görünümünde slayt yok"
+  },
+  "tooltips": {
+    "layers": "Katmanlar",
+    "basemaps": "Altlık haritalar",
+    "slides": "Slaytlar",
+    "close": "Kapat",
+    "zoom": "Yakınlaştır",
+    "onoff": "Açık-Kapalı"
+  }
+});

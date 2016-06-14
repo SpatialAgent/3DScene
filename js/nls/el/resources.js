@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "Δεν είναι δυνατή η δημιουργία 3D προβολής"
-    },
-    panel: {
-      noslides: "Δεν υπάρχουν διαφάνειες στην Web 3D Προβολή"
-    },
-    tooltips: {
-      layers: "Θεματικά επίπεδα",
-      basemaps: "Υπόβαθρα",
-      slides: "Διαφάνειες",
-      close: "Κλείσιμο",
-      zoom: "Εστίαση",
-      onoff: "Ενεργοποίηση-Απενεργοποίηση"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "Δεν είναι δυνατή η δημιουργία 3D προβολής"
+  },
+  "panel": {
+    "noslides": "Δεν υπάρχουν διαφάνειες στην Web 3D Προβολή"
+  },
+  "tooltips": {
+    "layers": "Θεματικά επίπεδα",
+    "basemaps": "Υπόβαθρα",
+    "slides": "Διαφάνειες",
+    "close": "Κλείσιμο",
+    "zoom": "Εστίαση",
+    "onoff": "Ενεργοποίηση-Απενεργοποίηση"
+  }
+});

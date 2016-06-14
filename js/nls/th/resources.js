@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "ไม่สามารถสร้างซีน"
-    },
-    panel: {
-      noslides: "ไม่มีสไลด์ในเว็บซีน"
-    },
-    tooltips: {
-      layers: "ชั้นข้อมูล",
-      basemaps: "แผนที่ฐาน",
-      slides: "สไลด์",
-      close: "ปิด",
-      zoom: "ขยาย",
-      onoff: "เปิด-ปิด"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "ไม่สามารถสร้างซีน"
+  },
+  "panel": {
+    "noslides": "ไม่มีสไลด์ในเว็บซีน"
+  },
+  "tooltips": {
+    "layers": "ชั้นข้อมูล",
+    "basemaps": "แผนที่ฐาน",
+    "slides": "สไลด์",
+    "close": "ปิด",
+    "zoom": "ขยาย",
+    "onoff": "เปิด-ปิด"
+  }
+});

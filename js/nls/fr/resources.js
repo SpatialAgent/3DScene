@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "Impossible de créer la scène"
-    },
-    panel: {
-      noslides: "Aucune diapositive dans la scène Web"
-    },
-    tooltips: {
-      layers: "Couches",
-      basemaps: "Fonds de carte",
-      slides: "Diapositives",
-      close: "Fermer",
-      zoom: "Zoom",
-      onoff: "Activer-Désactiver"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "Impossible de créer la scène"
+  },
+  "panel": {
+    "noslides": "Aucune diapositive dans la scène Web"
+  },
+  "tooltips": {
+    "layers": "Couches",
+    "basemaps": "Fonds de carte",
+    "slides": "Diapositives",
+    "close": "Fermer",
+    "zoom": "Zoom",
+    "onoff": "Activer-Désactiver"
+  }
+});

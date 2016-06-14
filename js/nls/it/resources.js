@@ -1,4 +1,4 @@
-﻿/*global define */
+/*global define */
 /*
  | Copyright 2014 Esri
  |
@@ -14,21 +14,19 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-   ({
-    scene: {
-      error: "Impossibile creare scena"
-    },
-    panel: {
-      noslides: "Nessuna diapositiva nella scena Web"
-    },
-    tooltips: {
-      layers: "Livelli",
-      basemaps: "Mappe di base",
-      slides: "Diapositive",
-      close: "Chiudi",
-      zoom: "Zoom",
-      onoff: "Attiva-Disattiva"
-    }
-  })
-);
+define({
+  "scene": {
+    "error": "Impossibile creare scena"
+  },
+  "panel": {
+    "noslides": "Nessuna diapositiva nella scena Web"
+  },
+  "tooltips": {
+    "layers": "Livelli",
+    "basemaps": "Mappe di base",
+    "slides": "Diapositive",
+    "close": "Chiudi",
+    "zoom": "Zoom",
+    "onoff": "Attiva-Disattiva"
+  }
+});

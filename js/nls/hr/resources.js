@@ -16,17 +16,17 @@
  */
 define({
   "scene": {
-    "error": "Não foi possível criar a cena"
+    "error": "Nije moguće stvoriti scenu"
   },
   "panel": {
-    "noslides": "Nenhum slide na cena da web"
+    "noslides": "Nema slajdova na web-sceni"
   },
   "tooltips": {
-    "layers": "Camadas",
-    "basemaps": "Mapas base",
-    "slides": "Slides",
-    "close": "Fechar",
-    "zoom": "Zoom",
-    "onoff": "On-Off"
+    "layers": "Slojevi",
+    "basemaps": "Kartografske podloge",
+    "slides": "Slajdovi",
+    "close": "Zatvori",
+    "zoom": "Povećaj",
+    "onoff": "Uključi - isključi"
   }
 });

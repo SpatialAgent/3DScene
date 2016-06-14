@@ -35,6 +35,8 @@ define([
 
   "esri/portal/PortalItem",
 
+  "esri/request",
+
   "esri/views/SceneView",
   "esri/WebScene",
 
@@ -53,6 +55,7 @@ define([
   Camera,
   Point, SpatialReference,
   PortalItem,
+  esriRequest,
   SceneView, WebScene,
   Search, SearchVM,
   uiUtils, LayerList, SlideList
@@ -77,6 +80,16 @@ define([
           this.reportError(error);
           return;
         }
+
+        // temp fix for scene layer
+        var regex = /\/SceneServer\/layers\/\d+\/?$/;
+        esriRequest.setRequestPreCallback(function(request) {
+          if (request && typeof request === "object" && !request.content && regex.test(request.url)) {
+            request.content = { f: "json" };
+          }
+          return request;
+        });
+
         this.config = config;
         this.uiUtils = new uiUtils();
         this.uiUtils.init(config);
@@ -127,27 +140,42 @@ define([
           id: this.config.webscene
         })
       });
-      var viewProperties = {
-        map: this.scene,
-        container: "panelView"
-      };
-      if (this.config.components) {
-        viewProperties.ui = {
-          components: this.config.components.split(",")
+
+      this.scene.load().then(lang.hitch(this, function(){
+
+        var viewProperties = {
+          map: this.scene,
+          container: "panelView"
         };
-      }
-      var camera = this._setCameraViewpoint();
-      if (camera) {
-        viewProperties.camera = camera;
-      }
+        if (this.scene.initialViewProperties.viewingMode === "local") {
+          viewProperties.constraints = {
+            collision: {
+              enabled: false
+            },
+            tilt: {
+              max: 179.99
+            }
+          };
+        }
+        if (this.config.components) {
+          viewProperties.ui = {
+            components: this.config.components.split(",")
+          };
+        }
+        var camera = this._setCameraViewpoint();
+        if (camera) {
+          viewProperties.camera = camera;
+        }
 
-      this.view = new SceneView(viewProperties);
+        this.view = new SceneView(viewProperties);
 
-      this.view.then(lang.hitch(this, function(response) {
-        this._initApp();
-        //setTimeout(lang.hitch(this, this._initApp), 3000);
-        return response;
-      }), this.reportError);
+        this.view.then(lang.hitch(this, function(response) {
+          this._initApp();
+          //setTimeout(lang.hitch(this, this._initApp), 3000);
+          return response;
+        }), this.reportError);
+
+      }));
 
     },
 
@@ -225,9 +253,17 @@ define([
 
     // set environment
     _setEnvironment: function() {
+      var aEnabled = false;
+      var sEnabled = false;
+      if (this.config.atmosphere === true) {
+        aEnabled = true;
+      }
+      if (this.config.stars === true) {
+        sEnabled = true;
+      }
       this.view.environment = {
-        atmosphere: this.config.atmosphere,
-        stars: this.config.stars
+        atmosphereEnabled: aEnabled,
+        starsEnabled: sEnabled
       };
     },
 
