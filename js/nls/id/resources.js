@@ -16,17 +16,17 @@
  */
 define({
   "scene": {
-    "error": "לא ניתן ליצור סצנה"
+    "error": "Tidak dapat membuat adegan"
   },
   "panel": {
-    "noslides": "אין שקפים בסצינת אינטרנט"
+    "noslides": "Tidak ada slide di adegan web"
   },
   "tooltips": {
-    "layers": "שכבות",
-    "basemaps": "מפות בסיס",
-    "slides": "שקופיות",
-    "close": "סגור",
-    "zoom": "התמקדות",
-    "onoff": "פועל-כבוי"
+    "layers": "Lapisan",
+    "basemaps": "Peta dasar",
+    "slides": "Slide",
+    "close": "Tutup",
+    "zoom": "Zoom",
+    "onoff": "Hidup-Mati"
   }
 });

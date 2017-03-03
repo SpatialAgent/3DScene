@@ -5,6 +5,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   color: #ffffff;
+  background-color: transparent;
 }
 
 .esri-layer-list .content {

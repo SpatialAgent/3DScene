@@ -16,17 +16,17 @@
  */
 define({
   "scene": {
-    "error": "לא ניתן ליצור סצנה"
+    "error": "Nije moguće stvoriti scenu"
   },
   "panel": {
-    "noslides": "אין שקפים בסצינת אינטרנט"
+    "noslides": "Nema slajdova na web-sceni"
   },
   "tooltips": {
-    "layers": "שכבות",
-    "basemaps": "מפות בסיס",
-    "slides": "שקופיות",
-    "close": "סגור",
-    "zoom": "התמקדות",
-    "onoff": "פועל-כבוי"
+    "layers": "Slojevi",
+    "basemaps": "Kartografske podloge",
+    "slides": "Slajdovi",
+    "close": "Zatvori",
+    "zoom": "Povećaj",
+    "onoff": "Uključi - isključi"
   }
 });

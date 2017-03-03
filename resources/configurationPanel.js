@@ -23,7 +23,8 @@
       "type": "color",
       "fieldName": "color",
       "label": "Color",
-      "tooltip": "Color"
+      "tooltip": "Color",
+      "sharedThemeProperty": "header.background"
     }, {
       "type": "boolean",
       "fieldName": "reverse",
