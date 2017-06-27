@@ -172,6 +172,7 @@ define([
         }
 
         this.view = new SceneView(viewProperties);
+        this.view.popup.closeOnViewChangeEnabled = true;
 
         this.view.then(lang.hitch(this, function(response) {
           this._initApp();

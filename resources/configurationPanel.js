@@ -1,13 +1,10 @@
 {
   "configurationSettings": [{
-    "category": "<b>Scene</b>",
+    "category": "<b>General</b>",
     "fields": [{
       "type": "webscene",
       "label": "Select a scene"
-    }]
-  },{
-    "category": "<b>Options</b>",
-    "fields": [{
+    }, {
       "type": "string",
       "fieldName": "title",
       "label": "Title",
@@ -19,7 +16,10 @@
       "label": "Subtitle",
       "tooltip": "Subtitle",
       "placeHolder": "Subtitle"
-    }, {
+    }]
+  }, {
+    "category": "<b>Theme</b>",
+    "fields": [{
       "type": "color",
       "fieldName": "color",
       "label": "Color",
@@ -30,7 +30,10 @@
       "fieldName": "reverse",
       "label": "Dark theme for map",
       "tooltip": "Dark theme for map"
-    }, {
+    }]
+  }, {
+    "category": "<b>Options</b>",
+    "fields": [{
       "type": "boolean",
       "fieldName": "showLayers",
       "label": "Enable a Layer List",
