@@ -64,7 +64,7 @@ define([
       domAttr.set(this.switchNode, "title", i18n.tooltips.onoff || "On-Off");
       this.view.whenLayerView(this.layer).then(lang.hitch(this, function(layerView){
         layerView.watch('visible', lang.hitch(this, function(newValue, oldValue, property, object) {
-          //console.log(newValue, oldValue, property, object);
+          console.log(newValue, oldValue, property, object);
           if (newValue === true) {
             domClass.remove(this.itemNode, "off");
           } else {
