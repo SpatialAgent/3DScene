@@ -48,7 +48,7 @@ define([
   "application/SlideList/SlideList",
 
   "dojo/domReady!"
-], function(
+], function (
   declare, lang,
   Deferred,
   dom, domAttr, domClass, domStyle, on,
@@ -68,7 +68,7 @@ define([
     uiUtils: null,
     search: null,
 
-    startup: function(config) {
+    startup: function (config) {
       var promise;
       var error;
       // config will contain application and user defined info for the template such as i18n strings, the web map id
@@ -80,15 +80,6 @@ define([
           this.reportError(error);
           return;
         }
-
-        // temp fix for scene layer
-        var regex = /\/SceneServer\/layers\/\d+\/?$/;
-        esriRequest.setRequestPreCallback(function(request) {
-          if (request && typeof request === "object" && !request.content && regex.test(request.url)) {
-            request.content = { f: "json" };
-          }
-          return request;
-        });
 
         this.config = config;
         this.uiUtils = new uiUtils();
@@ -104,7 +95,7 @@ define([
       return promise;
     },
 
-    reportError: function(error) {
+    reportError: function (error) {
       // remove loading class from body
       domClass.remove(document.body, "app-loading");
       domClass.add(document.body, "app-error");
@@ -125,7 +116,7 @@ define([
     },
 
     // create a scene based on the input web scene id
-    _createWebScene: function() {
+    _createWebScene: function () {
       // Create a scene from json will be coming.
       // for now scene from id only.
       // if(this.config.itemInfo){
@@ -141,7 +132,17 @@ define([
         })
       });
 
-      this.scene.load().then(lang.hitch(this, function(){
+      this.scene.load().then(lang.hitch(this, function () {
+
+        if (this.config.layerMixins) {
+          this.config.layerMixins.forEach(lang.hitch(this, function (proxy) {
+            this.scene.layers.forEach(function (layer) {
+              if (layer.url === proxy.url) {
+                layer.url = proxy.mixin.url;
+              }
+            });
+          }));
+        }
 
         var viewProperties = {
           map: this.scene,
@@ -174,7 +175,7 @@ define([
         this.view = new SceneView(viewProperties);
         this.view.popup.closeOnViewChangeEnabled = true;
 
-        this.view.then(lang.hitch(this, function(response) {
+        this.view.when(lang.hitch(this, function (response) {
           this._initApp();
           //setTimeout(lang.hitch(this, this._initApp), 3000);
           return response;
@@ -185,7 +186,7 @@ define([
     },
 
     // set camera viewpoint
-    _setCameraViewpoint: function() {
+    _setCameraViewpoint: function () {
       var camera;
       var viewpointParamString = null;
       if (this.config.viewpoint) {
@@ -248,7 +249,7 @@ define([
     },
 
     // init app
-    _initApp: function() {
+    _initApp: function () {
       domClass.remove(document.body, "app-loading");
       //this._setEnvironment();
       this._setTitles();
@@ -257,7 +258,7 @@ define([
     },
 
     // set environment
-    _setEnvironment: function() {
+    _setEnvironment: function () {
       var aEnabled = false;
       var sEnabled = false;
       if (this.config.atmosphere === true) {
@@ -273,14 +274,14 @@ define([
     },
 
     // set titles
-    _setTitles: function() {
+    _setTitles: function () {
       document.title = this.config.title || this.scene.portalItem.title;
       dom.byId("panelTitle").innerHTML = this.config.title || this.scene.portalItem.title;
       dom.byId("panelSubtitle").innerHTML = this.config.subtitle;
     },
 
     // init ui
-    _initUI: function() {
+    _initUI: function () {
       this._initLayers();
       this._initBasemaps();
       this._initSlides();
@@ -300,7 +301,7 @@ define([
     },
 
     //toggle panel
-    _togglePanel: function(value) {
+    _togglePanel: function (value) {
       domStyle.set("panelLayers", "display", "none");
       domStyle.set("panelBasemaps", "display", "none");
       domStyle.set("panelSlides", "display", "none");
@@ -309,13 +310,13 @@ define([
     },
 
     // toggle bottom
-    _toggleBottom: function() {
+    _toggleBottom: function () {
       domClass.toggle("panelBottom", "opened");
       domClass.toggle("panelTop", "closed");
     },
 
     // init layers
-    _initLayers: function() {
+    _initLayers: function () {
       if (this.config.showLayers) {
         var options = {
           view: this.view,
@@ -330,7 +331,7 @@ define([
 
     // TO DO: Add basemaps gallery when the core widget is available
     // init basemaps
-    _initBasemaps: function() {
+    _initBasemaps: function () {
       if (this.config.showBasemaps) {
         on(dom.byId("btnBasemaps"), "click", lang.hitch(this, this._togglePanel, "panelBasemaps"));
         domStyle.set("btnBasemaps", "display", "block");
@@ -338,7 +339,7 @@ define([
     },
 
     // initSlides
-    _initSlides: function() {
+    _initSlides: function () {
       if (this.scene.presentation.slides.length > 0) {
         var options = {
           scene: this.scene,
@@ -353,7 +354,7 @@ define([
     },
 
     // init search
-    _initSearch: function() {
+    _initSearch: function () {
       var search = new Search({
         //view: this.view,
         //showPopupOnSelect: false,

@@ -16,21 +16,21 @@
  */
 define({
   "scene": {
-    "error": "Kan ikke oprette scene",
+    "error": "No es pot crear l'escena",
     "licenseError": {
-      "message": "Din konto har ikke licens til at bruge Konfigurérbare apps, der ikke er offentlige. Bed din organisationsadministrator om at knytte dig til en brugertype, der omfatter Essential Apps eller en add-on Essential Apps-licens.",
-      "title": "Ikke licenseret"
+      "message": "El vostre compte no té llicència per utilitzar aplicacions configurables que no siguin públiques. Demaneu a l'administrador de l'organització que us assigni un tipus d'usuari que inclogui les aplicacions bàsiques o una llicència d'aplicacions bàsiques de complement.",
+      "title": "Sense llicència"
     }
   },
   "panel": {
-    "noslides": "Ingen dias i webscene"
+    "noslides": "No hi ha cap diapositiva a l'escena web"
   },
   "tooltips": {
-    "layers": "Lag",
-    "basemaps": "Baggrundskort",
-    "slides": "Dias",
-    "close": "Luk",
+    "layers": "Capes",
+    "basemaps": "Mapes base",
+    "slides": "Diapositives",
+    "close": "Tanca",
     "zoom": "Zoom",
-    "onoff": "Til-Fra"
+    "onoff": "Activat/desactivat"
   }
 });

@@ -16,21 +16,21 @@
  */
 define({
   "scene": {
-    "error": "Kan ikke oprette scene",
+    "error": "Nem sikerült létrehozni a 3D térképet",
     "licenseError": {
-      "message": "Din konto har ikke licens til at bruge Konfigurérbare apps, der ikke er offentlige. Bed din organisationsadministrator om at knytte dig til en brugertype, der omfatter Essential Apps eller en add-on Essential Apps-licens.",
-      "title": "Ikke licenseret"
+      "message": "Az Ön fiókjának licence nem terjed ki a nem nyilvános konfigurálható alkalmazásokra. Igényelje a szervezete adminisztrátorától, hogy rendeljen Önhöz olyan felhasználótípust, amely tartalmazza az alapvető alkalmazásokat, vagy egy kiegészítő alapvető alkalmazásokra vonatkozó licencet.",
+      "title": "Nincs licence"
     }
   },
   "panel": {
-    "noslides": "Ingen dias i webscene"
+    "noslides": "Nincs dia a web 3D térképen"
   },
   "tooltips": {
-    "layers": "Lag",
-    "basemaps": "Baggrundskort",
-    "slides": "Dias",
-    "close": "Luk",
-    "zoom": "Zoom",
-    "onoff": "Til-Fra"
+    "layers": "Rétegek",
+    "basemaps": "Alaptérképek",
+    "slides": "Diák",
+    "close": "Bezárás",
+    "zoom": "Nagyítás/kicsinyítés",
+    "onoff": "Be/ki"
   }
 });

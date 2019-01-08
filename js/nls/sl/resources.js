@@ -16,21 +16,21 @@
  */
 define({
   "scene": {
-    "error": "Kan ikke oprette scene",
+    "error": "3D-prizora ni mogoče ustvariti",
     "licenseError": {
-      "message": "Din konto har ikke licens til at bruge Konfigurérbare apps, der ikke er offentlige. Bed din organisationsadministrator om at knytte dig til en brugertype, der omfatter Essential Apps eller en add-on Essential Apps-licens.",
-      "title": "Ikke licenseret"
+      "message": "Vaš račun ni licenciran za uporabo konfigurabilnih aplikacij, ki niso javne. Prosite administratorja v vaši organizaciji, da vam dodeli tip uporabnika, ki vsebuje aplikacije Essential Apps ali licenco za dodatne aplikacije Essential Apps.",
+      "title": "Brez licence"
     }
   },
   "panel": {
-    "noslides": "Ingen dias i webscene"
+    "noslides": "V spletnem 3D-prizoru ni drsnic"
   },
   "tooltips": {
-    "layers": "Lag",
-    "basemaps": "Baggrundskort",
-    "slides": "Dias",
-    "close": "Luk",
-    "zoom": "Zoom",
-    "onoff": "Til-Fra"
+    "layers": "Sloji",
+    "basemaps": "Temeljne karte",
+    "slides": "Drsnice",
+    "close": "Zapri",
+    "zoom": "Povečava",
+    "onoff": "Vklop-Izklop"
   }
 });

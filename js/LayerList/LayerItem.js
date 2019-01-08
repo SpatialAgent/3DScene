@@ -56,6 +56,7 @@ define([
         }
       }
       this.titleNode.innerHTML = this.layer.title || this.layer.name;
+      this.titleNode.title = this.layer.title || this.layer.name;
       if (!this.layer.visible) {
         domClass.add(this.itemNode, "off");
       }
