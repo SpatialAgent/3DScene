@@ -23,7 +23,7 @@ define({
     }
   },
   "panel": {
-    "noslides": "Web scēnā nav slaidi"
+    "noslides": "Tīmekļa scēnā nav slaidu"
   },
   "tooltips": {
     "layers": "Slāņi",

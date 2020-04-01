@@ -62,6 +62,9 @@ define([
       }
       domStyle.set(this.switchNode, "backgroundColor", this.color);
       domAttr.set(this.actionNode, "title", i18n.tooltips.zoom || "Zoom");
+      if (this.group) {
+        domStyle.set(this.actionNode, "background-size", "0px");
+      }
       domAttr.set(this.switchNode, "title", i18n.tooltips.onoff || "On-Off");
       this.view.whenLayerView(this.layer).then(lang.hitch(this, function(layerView){
         layerView.watch('visible', lang.hitch(this, function(newValue, oldValue, property, object) {

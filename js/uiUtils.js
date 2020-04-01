@@ -51,9 +51,15 @@ define([
       this.config.colorText = colorText;
       domStyle.set("panelTop", "color", colorText);
       domStyle.set("panelTop", "backgroundColor", color);
-      query(".esri-search").style("backgroundColor", bg3);
-      query(".esri-search__input").style("color", colorText);
-      query(".esri-search .esri-widget-button").style("color", colorText);
+      query(".esri-search").forEach(function(node) {
+        domStyle.set(node, "backgroundColor", bg3);
+      });
+      query(".esri-search__input").forEach(function(node) {
+        domStyle.set(node, "color", colorText);
+      });
+      query(".esri-search .esri-widget-button").forEach(function(node) {
+        domStyle.set(node, "color", colorText);
+      });
       //query(".esri-search .esri-container").style("backgroundColor", bg3);
       //query(".esri-search .esri-container").style("color", color);
       if(colorText === "#000000") {

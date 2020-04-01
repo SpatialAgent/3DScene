@@ -133,7 +133,9 @@ define([
       var extent = layer.extent || layer.fullExtent;
       if (extent) {
         extent = extent.expand(1.2);
-        this.view.animateTo(extent);
+        this.view.goTo({
+          target: extent
+        });
       }
     }
 
