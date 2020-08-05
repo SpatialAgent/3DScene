@@ -363,7 +363,7 @@ define([
         }),
         enableHighlight: false
       }, "panelSearch");
-      search.startup();
+      //search.startup();
       // Set active view
       // search.watch(function(property, oldValue, newValue) {
       //   if (property === "searchResults") {
